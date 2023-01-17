@@ -7,10 +7,11 @@
 
 html {
 	scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 body{
 	background-color: #101010;
-	overflow-x: hidden;
+	font-size: 18px;
 }
 .hero{
 	min-height: 100vh;
@@ -38,7 +39,7 @@ nav{
 }
 .logo{
 	color: white;
-	font-size: 35px;
+	font-size: 2rem;
 	letter-spacing: 1px;
 	cursor: pointer;
 }
@@ -85,17 +86,20 @@ nav ul li a:hover{
 h1{
 	color: white;
 	margin: 20px 0px 20px;
-	font-size: 75px;
+	font-size: 4rem;
+}
+h2{
+	font-size: 3rem;
 }
 h3{
 	color: white;
-	font-size: 25px;
+	font-size: 2rem;
 	margin-bottom: 50px;
 }
 h4{
 	color: #fcfc;
 	letter-spacing: 2px;
-	font-size: 20px;
+	font-size: 1rem;
 }
 .newslatter form{
 	width: 380px;
@@ -146,14 +150,12 @@ h4{
 }
 .about-text h2{
 	color: white;
-	font-size: 75px;
 	text-transform: capitalize;
 	margin-bottom: 20px;
 }
 .about-text h5{
 	color: white;
 	letter-spacing: 2px;
-	font-size: 22px;
 	margin-bottom: 25px;
 	text-transform: capitalize;
 }
@@ -161,7 +163,6 @@ h4{
 	color: #fcfc;
 	letter-spacing: 1px;
 	line-height: 28px;
-	font-size: 18px;
 	margin-bottom: 45px;
 }
 button,.btn{
@@ -188,7 +189,6 @@ button:hover{
 }
 .title h2{
 	color: white;
-	font-size: 75px;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -243,7 +243,7 @@ button:hover{
 
 
 .card i{
-	font-size: 50px;
+	font-size: 3rem;
 	display: block;
 	text-align: center;
 	margin: 25px 0px;
@@ -252,12 +252,10 @@ button:hover{
 }
 h5{
 	color: white;
-	font-size: 23px;
 	margin-bottom: 15px;
 }
 .pra p{
 	color: #fcfc;
-	font-size: 16px;
 	line-height: 27px;
 	margin-bottom: 25px;
 }
@@ -287,7 +285,7 @@ h5{
 }
 .contact-me p{
 	color: white;
-	font-size: 30px;
+	font-size: 2rem;
 	font-weight: bold;
 	margin-bottom: 25px;
 }
@@ -307,27 +305,7 @@ h5{
 	cursor: pointer;
 }
 footer{
-	position: relative;
-	width: 100%;
-	height: 400px;
-	background: #101010;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
-footer p:nth-child(1){
-	font-size: 30px;
-	color: white;
-	margin-bottom: 20px;
-	font-weight: bold;
-}
-footer p:nth-child(2){
-	color: white;
-	font-size: 17px;
-	width: 500px;
-	text-align: center;
-	line-height: 26px;
+	border-top: 10px solid white;
 }
 .social{
 	display: flex;
@@ -343,7 +321,6 @@ footer p:nth-child(2){
 	margin: 22px 10px;
 	color: white;
 	text-decoration: none;
-	font-size: 20px;
 }
 .social a:hover{
 	transform: scale(1.3);
@@ -353,7 +330,7 @@ footer p:nth-child(2){
 	position: absolute;
 	color:#f9004d;
 	bottom: 35px;
-	font-size: 14px; 
+	font-size: .9rem; 
 }
 
 /***************************************************/
@@ -370,7 +347,7 @@ footer p:nth-child(2){
 .container {
   background-image: url(../img/back4.png);
   background-size: cover;
-	background-position: center;
+  background-position: center;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -382,7 +359,7 @@ footer p:nth-child(2){
 section {
   width: 100%;
   margin-top: 1em;
-  transform: translateX(200px);
+  transform: translateX(-200px);
   opacity: 0;
   transition: 400ms;
 }
@@ -415,7 +392,7 @@ section.projects {
   color: white;
   width: 100%;
   min-height: 529px;
-  max-width: 20rem;
+  /* max-width: 20rem; */
   padding: 1em;
   display: flex;
   flex-direction: column;
@@ -451,10 +428,9 @@ section.projects {
 
 .project__body h1 {
   color: var(--dark-color);
-  /* font-size: 1.3rem; */
   margin-bottom: 0.5em;
   margin-top: 0;
-  font-size: 30px;
+  font-size: 2rem;
   
 }
 
@@ -484,14 +460,29 @@ section.projects {
 }
 
 
-@media screen and (max-width: 732px) {
-
+@media screen and (max-width: 1080px) {
+  body{
+	/* font-size: 24px; */
+  }
   .row {
     flex-direction: column;
   }
   nav{
 	/* display: none; */
 	visibility: hidden;
+  }
+
+  .hero{
+	/* background-color: red; */
+	min-height: 0;
+	/* height: 200px; */
+  }
+
+  .card{
+	width: 30em;
+  }
+  .card, .project{
+	max-width: 40em;
   }
 
 }
