@@ -10,6 +10,7 @@ html {
 }
 body{
 	background-color: #101010;
+	overflow-x: hidden;
 }
 .hero{
 	min-height: 100vh;
@@ -370,7 +371,6 @@ footer p:nth-child(2){
   background-image: url(../img/back4.png);
   background-size: cover;
 	background-position: center;
-  /* background-color: #191919; */
   width: 100%;
   display: flex;
   justify-content: center;
@@ -382,7 +382,15 @@ footer p:nth-child(2){
 section {
   width: 100%;
   margin-top: 1em;
+  transform: translateX(200px);
+  opacity: 0;
+  transition: 400ms;
 }
+.show{
+    transform: translate(0);
+    opacity: 1;
+}
+
 section .container {
   margin: 0 auto;
 }
